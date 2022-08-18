@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>The Element Object</h1>
+    <h2>The textContent Property</h2>
+
+    <button id="myBtn">Try it</button>
+
+    <div id="orContent">
+        <p>The text content of the button is:</p>
+        <p id="demo"></p>
+    </div>
+
+    <button onclick="getTextContent()">get Text Content</button>
+
+    <button onclick="getInnerHtml()">get Inner Html</button>
+
+    <button
+        onclick=" getInnerText()">get
+        Inner Text</button>
+
+    <div id="content">
+
+    </div>
+    <script>
+        function getTextContent() { document.getElementById('content').innerHTML = document.getElementById('orContent').textContent; return false; }
+        function getInnerHtml(){ document.getElementById('content').innerHTML = document.getElementById('orContent').innerHTML;  return false;}
+        function getInnerText(){ document.getElementById('content').innerHTML = document.getElementById('orContent').innerText;  return false;}
+        let text = document.getElementById("myBtn").textContent;
+        document.getElementById("demo").innerHTML = text;  
+    </script>
+
+</body>
+
+</html>
